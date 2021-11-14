@@ -61,7 +61,7 @@ func (c *Connection) StartReader() {
 
 //启动链接 让当前的链接准备开始工作
 func (c *Connection) Start() {
-	fmt.Println("Conn Start() ... ConnID = ", c.ConnID)
+	fmt.Println("Conn Start() ... ConnID =", c.ConnID)
 
 	//启动从当前链接的读数据的业务
 	go c.StartReader()

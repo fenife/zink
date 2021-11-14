@@ -1,6 +1,9 @@
 # zink
     step by step to learn zinx
 
+## 目录说明
+    myDemo： 基于各版本的Zinx框架来开发的 服务器端应用程序
+
 ## zinx
 
 ### 代码

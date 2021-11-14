@@ -20,28 +20,7 @@
 
 <img src="assets/image-20211114174302325.png" alt="image-20211114174302325" style="zoom:50%;" />
 
-```go
-func (c *Connection) Start() {
-   panic("implement me")
-}
+### 07-zinxV0.2-链接模块的方法实现
 
-func (c *Connection) Stop() {
-   panic("implement me")
-}
+同上
 
-func (c *Connection) GetTCPConnection() *net.TCPConn {
-   panic("implement me")
-}
-
-func (c *Connection) GetConnID() uint32 {
-   panic("implement me")
-}
-
-func (c *Connection) RemoteAddr() net.Addr {
-   panic("implement me")
-}
-
-func (c *Connection) Send(data []byte) error {
-   panic("implement me")
-}
-```

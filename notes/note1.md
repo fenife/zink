@@ -12,9 +12,36 @@
 
 <img src="assets/image-20211114120555112.png" alt="image-20211114120555112" style="zoom:50%;" />
 
-## 05-zinxV0.1-开发服务器应用
+### 05-zinxV0.1-开发服务器应用
 
 同上
 
+### 06-zinxV0.2-链接模块的封装(方法与属性) 
 
+<img src="assets/image-20211114174302325.png" alt="image-20211114174302325" style="zoom:50%;" />
 
+```go
+func (c *Connection) Start() {
+   panic("implement me")
+}
+
+func (c *Connection) Stop() {
+   panic("implement me")
+}
+
+func (c *Connection) GetTCPConnection() *net.TCPConn {
+   panic("implement me")
+}
+
+func (c *Connection) GetConnID() uint32 {
+   panic("implement me")
+}
+
+func (c *Connection) RemoteAddr() net.Addr {
+   panic("implement me")
+}
+
+func (c *Connection) Send(data []byte) error {
+   panic("implement me")
+}
+```

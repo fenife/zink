@@ -27,3 +27,8 @@
 ### 08-zinxV0.2-server与connection的集成
 
 同上
+
+### 09-zinxV0.3-Request请求消息的封装定义
+
+<img src="assets/image-20211117010201964.png" alt="image-20211117010201964" style="zoom:50%;" />
+

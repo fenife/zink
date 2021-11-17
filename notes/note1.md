@@ -35,3 +35,7 @@
 ### 10-zinxV0.3-Router模块的定义
 
 <img src="assets/image-20211117231108827.png" alt="image-20211117231108827" style="zoom:50%;" />
+
+### 11-zinxV0.3-框架集成router模块
+
+<img src="assets/image-20211117234703696.png" alt="image-20211117234703696" style="zoom:50%;" />

@@ -39,3 +39,7 @@
 ### 11-zinxV0.3-框架集成router模块
 
 <img src="assets/image-20211117234703696.png" alt="image-20211117234703696" style="zoom:50%;" />
+
+### 12-zinxV0.3-开发服务器应用
+
+<img src="assets/image-20211118000200747.png" alt="image-20211118000200747" style="zoom:50%;" />

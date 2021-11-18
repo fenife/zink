@@ -47,3 +47,7 @@
 ### 13-zinxV0.4-添加全局配置模块思路及目标
 
 <img src="assets/image-20211118232915997.png" alt="image-20211118232915997" style="zoom:50%;" />
+
+### 14-zinxV0.4-实现全局配置模块
+
+<img src="assets/image-20211118234148615.png" alt="image-20211118234148615" style="zoom:50%;" />

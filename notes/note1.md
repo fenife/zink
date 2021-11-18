@@ -43,3 +43,7 @@
 ### 12-zinxV0.3-开发服务器应用
 
 <img src="assets/image-20211118000200747.png" alt="image-20211118000200747" style="zoom:50%;" />
+
+### 13-zinxV0.4-添加全局配置模块思路及目标
+
+<img src="assets/image-20211118232915997.png" alt="image-20211118232915997" style="zoom:50%;" />

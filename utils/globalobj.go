@@ -13,17 +13,17 @@ import (
 type GlobalObj struct {
 	/*
 	 Server
-	 */
-	TcpServer ziface.IServer	//当前Zinx全局的Server对象
-	Host string //当前服务器监听的IP
-	TcpPort int //当前服务器监听的端口号
-	Name string //当前服务器的名称
+	*/
+	TcpServer ziface.IServer //当前Zinx全局的Server对象
+	Host      string         //当前服务器监听的IP
+	TcpPort   int            //当前服务器监听的端口号
+	Name      string         //当前服务器的名称
 
 	/*
 	 Zinx
 	*/
-	Version string //当前Zinx的版本号
-	MaxConn int //当前服务器主机允许的最大链接数
+	Version        string //当前Zinx的版本号
+	MaxConn        int    //当前服务器主机允许的最大链接数
 	MaxPackageSize uint32 //当前Zinx框架数据包的最大值
 }
 
@@ -32,7 +32,7 @@ type GlobalObj struct {
 */
 var GlobalObject *GlobalObj
 
-func (g *GlobalObj)Reload() {
+func (g *GlobalObj) Reload() {
 	data, err := ioutil.ReadFile("conf/zinx.json")
 	if err != nil {
 		panic(err)
@@ -50,15 +50,13 @@ func (g *GlobalObj)Reload() {
 func init() {
 	//如果配置文件没有加载，默认的值
 	GlobalObject = &GlobalObj{
-		Name: "ZinxServerApp",
-		Version: "v0",
-		TcpPort: 8999,
-		Host: "0.0.0.0",
-		MaxConn: 1000,
+		Name:           "ZinxServerApp",
+		Version:        "v0",
+		TcpPort:        8999,
+		Host:           "0.0.0.0",
+		MaxConn:        1000,
 		MaxPackageSize: 4096,
 	}
 	//应该尝试从conf/zinx.json加载
 	GlobalObject.Reload()
 }
-
-

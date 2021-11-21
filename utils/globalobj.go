@@ -58,5 +58,5 @@ func init() {
 		MaxPackageSize: 4096,
 	}
 	//应该尝试从conf/zinx.json加载
-	GlobalObject.Reload()
+	//GlobalObject.Reload()
 }

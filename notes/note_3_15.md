@@ -1,4 +1,4 @@
-## 视频笔记（typora）
+## 视频笔记1（typora）
 
 ### 03-zinxV0.1-基础server模块定义
 
@@ -55,8 +55,4 @@
 ### 15-zinxV0.4-全局参数的硬代码替换
 
 无
-
-### 16-ZinxV0.4-开发服务器应用
-
-<img src="assets/image-20211121105707196.png" alt="image-20211121105707196" style="zoom:50%;" />
 

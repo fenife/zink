@@ -26,11 +26,11 @@ type Connection struct {
 //初始化链接模块的方法
 func NewConnection(conn *net.TCPConn, connID uint32, router ziface.IRouter) *Connection {
 	c := &Connection{
-		Conn:      conn,
-		ConnID:    connID,
-		Router:    router,
-		isClosed:  false,
-		ExitChan:  make(chan bool, 1),
+		Conn:     conn,
+		ConnID:   connID,
+		Router:   router,
+		isClosed: false,
+		ExitChan: make(chan bool, 1),
 	}
 
 	return c

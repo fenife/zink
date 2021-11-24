@@ -22,7 +22,7 @@ func (br *PingRouter) Handle(request ziface.IRequest) {
 	//读取客户端的数据，再回写ping
 	fmt.Printf("recv from client: msgId = %d, data = %s",
 		request.GetMsgID(), request.GetData())
-	err := request.GetConnection().SendMsg(1, []byte("ping...ping...ping\n"))
+	err := request.GetConnection().SendMsg(1, []byte("ping...ping...ping"))
 	if err != nil {
 		fmt.Println(err)
 	}

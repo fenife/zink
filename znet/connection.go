@@ -43,7 +43,7 @@ func NewConnection(conn *net.TCPConn, connID uint32, msgHandler ziface.IMsgHandl
 //写消息Goroutine, 专门发送给客户端消息的模块
 func (c *Connection) StartWriter() {
 	fmt.Println("[Writer Goroutine is running]")
-	defer fmt.Println(c.RemoteAddr().String(), "[conn Writer exit!]")
+	defer fmt.Println("[conn Writer exit!]", c.RemoteAddr().String())
 	//不断的阻塞的等待channl的消息, 进行写给客户端
 	for {
 		select {
@@ -63,7 +63,7 @@ func (c *Connection) StartWriter() {
 //链接的读业务方法
 func (c *Connection) StartReader() {
 	fmt.Println("[Reader Goroutine is running]")
-	defer fmt.Printf("ConnID = %d, [Reader is exit!], remote addr is %s\n",
+	defer fmt.Printf("[Reader is exit!], ConnID = %d, remote addr is %s\n",
 		c.ConnID, c.RemoteAddr().String())
 	defer c.Stop()
 

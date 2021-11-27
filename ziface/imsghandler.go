@@ -4,7 +4,7 @@ package ziface
   消息管理抽象层
 */
 
-type IMsgHandle interface {
+type IMsgHandler interface {
 	//执行对应的Router消息处理方法
 	DoMsgHandler(request IRequest)
 

@@ -2,6 +2,7 @@ package znet
 
 import (
 	"fmt"
+	"zink/utils"
 	"zink/ziface"
 )
 
@@ -12,12 +13,18 @@ import (
 type MsgHandler struct {
 	//存放每个MsgID 所对应的处理方法
 	Apis map[uint32]ziface.IRouter
+	//负责Worker取任务的消息队列
+	TaskQueue []chan ziface.IRequest
+	//负责工作Worker池的worker数量
+	WorkerPoolSize uint32
 }
 
 //初始化创建MsgHandler方法
 func NewMsgHandler() *MsgHandler {
 	return &MsgHandler{
-		Apis: make(map[uint32]ziface.IRouter),
+		Apis:           make(map[uint32]ziface.IRouter),
+		WorkerPoolSize: utils.GlobalObject.WorkerPoolSize, //从全局配置中获取
+		TaskQueue:      make([]chan ziface.IRequest, int(utils.GlobalObject.WorkerPoolSize)),
 	}
 }
 
@@ -45,4 +52,3 @@ func (h *MsgHandler) AddRouter(msgID uint32, router ziface.IRouter) {
 	h.Apis[msgID] = router
 	fmt.Printf("Add api msgID = %d succ\n", msgID)
 }
-

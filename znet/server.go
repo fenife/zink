@@ -59,13 +59,13 @@ func (s *Server) Start() {
 			//设置最大链接个数的判断，如果超过最大链接，那么则关闭此新的链接
 			if s.ConnMgr.Len() >= utils.GlobalObject.MaxConn {
 				//TODO 给客户端响应一个超出最大链接的错误包
-				fmt.Println("too many connection")
+				fmt.Println("too many connection, maxConn:", utils.GlobalObject.MaxConn)
 				conn.Close()
 				continue
 			}
 
 			//将处理新连接的业务方法和conn进行绑定，得到链接模块
-			dealConn := NewConnection(conn, cid, s.MsgHandler)
+			dealConn := NewConnection(s, conn, cid, s.MsgHandler)
 			cid++
 
 			//启动当前的链接业务处理
@@ -79,6 +79,10 @@ func (s *Server) Stop() {
 	// 将一些服务器的资源，状态或者一些已开辟的连接信息 进行停止或回收
 	fmt.Println("[STOP] zinx server stop", s.Name)
 	s.ConnMgr.ClearConn()
+}
+
+func(s *Server) GetConnMgr() ziface.IConnManager {
+	return s.ConnMgr
 }
 
 func (s *Server) AddRouter(msgID uint32, router ziface.IRouter) {
